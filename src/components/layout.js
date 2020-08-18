@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import "./layout.css"
 
@@ -26,15 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </>
   )
 }

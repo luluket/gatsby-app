@@ -4,11 +4,45 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../components/bootstrap.css"
+import Title from "../components/title"
+import { Carousel } from "react-bootstrap"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Healthy&Fit" />
+    <div class="container">
+      <SEO title="Healthy&Fit" />
+      <Title title="Be healthy, stay strong" />
+      <Carousel>
+        {data.allFile.nodes.map(node => {
+          return (
+            <Carousel.Item>
+              <Img
+                fluid={node.childImageSharp.fluid}
+                className="d-block w-100"
+              />
+              <Carousel.Caption />
+            </Carousel.Item>
+          )
+        })}
+      </Carousel>
+    </div>
   </Layout>
 )
 
+export const query = graphql`
+  {
+    allFile(filter: { relativeDirectory: { eq: "carousel" } }) {
+      nodes {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`
 export default IndexPage
