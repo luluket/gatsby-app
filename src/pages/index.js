@@ -14,19 +14,21 @@ const IndexPage = ({ data }) => (
     <div class="container">
       <SEO title="Healthy&Fit" />
       <Title title="Be healthy, stay strong" />
-      <Carousel>
-        {data.allFile.nodes.map(node => {
-          return (
-            <Carousel.Item>
-              <Img
-                fluid={node.childImageSharp.fluid}
-                className="d-block w-100"
-              />
-              <Carousel.Caption />
-            </Carousel.Item>
-          )
-        })}
-      </Carousel>
+      <div>
+        <Carousel>
+          {data.allFile.nodes.map(node => {
+            return (
+              <Carousel.Item>
+                <Img
+                  fluid={node.childImageSharp.fluid}
+                  className="d-block w-100"
+                />
+                <Carousel.Caption />
+              </Carousel.Item>
+            )
+          })}
+        </Carousel>
+      </div>
     </div>
   </Layout>
 )

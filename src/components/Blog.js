@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
   return (
-    <article className="card col-lg-4 col-md-6 col-sm-12 m-1 p-0">
+    <article className="card col-lg-4 col-md-6 col-sm-12 p-1 border-0">
       <div>
         <Link
           to={`/blogs/${slug}`}

@@ -6,7 +6,7 @@ export const Blogs = ({ blogs, title, showLink }) => {
   return (
     <section className="container">
       <Title title={title} />
-      <div className="d-lg-flex d-md-flex">
+      <div className="d-lg-flex d-md-flex flex-wrap">
         {blogs.map(blog => {
           return <Blog key={blog.id} {...blog} />
         })}
