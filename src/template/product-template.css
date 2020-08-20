@@ -1,0 +1,13 @@
+@media screen and (max-width: 635px) {
+  .products-content {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .products-content .col-6 {
+    max-width: 100%;
+    padding: 0;
+  }
+  .products-content button {
+    margin-bottom: 1rem;
+  }
+}

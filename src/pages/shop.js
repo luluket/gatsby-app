@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import Title from "../components/title"
 import Img from "gatsby-image"
 import "../components/shop.css"
+import { Link } from "gatsby"
+import { FaRProject } from "react-icons/fa"
 export default function shop({ data }) {
   return (
     <Layout>
@@ -15,15 +17,21 @@ export default function shop({ data }) {
                 key={product.id}
                 className="card col-lg-4 col-md-6 col-sm-6 col-6 p-1 border-0"
               >
-                <div class="card-header p-0">
-                  <Img fluid={product.image.childImageSharp.fluid}></Img>
-                </div>
-                <div class="card-body border">
-                  <h5>{product.title}</h5>
-                </div>
-                <div class="card-footer">
-                  <span>{product.price} kn</span>
-                </div>
+                <Link
+                  to={`/shop/${product.slug}`}
+                  className="text-decoration-none text-dark"
+                  key={product.id}
+                >
+                  <div class="card-header p-0">
+                    <Img fluid={product.image.childImageSharp.fluid}></Img>
+                  </div>
+                  <div class="card-body border">
+                    <h5>{product.title}</h5>
+                  </div>
+                  <div class="card-footer">
+                    <span>{product.price} kn</span>
+                  </div>
+                </Link>
               </div>
             )
           })}

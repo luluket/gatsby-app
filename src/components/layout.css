@@ -44,7 +44,7 @@ h6 {
 .cart-icon {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  color: var(--mainYellow);
+  color: var(--mainDark);
   font-size: 2rem;
 }
 .cart-icon:hover {

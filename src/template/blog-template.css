@@ -36,9 +36,14 @@
   --fixed-width: 700px;
 }
 
-.blog-content h1,
-.blog-content h2 {
+.blog-content h1 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.blog-content h2 {
+  font-size: 1.5rem;
 }
 .blog-content ul {
   margin-top: 2rem;
@@ -68,6 +73,7 @@
 }
 .blog-content p {
   margin: 0;
+  margin-bottom: 1rem;
   font-size: 13px;
 }
 @media screen and (min-width: 846px) {
