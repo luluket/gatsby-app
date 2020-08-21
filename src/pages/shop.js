@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Title from "../components/title"
-
+import "../components/shop.css"
 const getCategories = items => {
   let tempItems = items.map(items => {
     return items.category

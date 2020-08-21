@@ -7,6 +7,8 @@ import Title from "../components/title"
 import { Carousel } from "react-bootstrap"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Sponsors from "../components/sponsors.js"
+import Footer from "../components/footer.js"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -28,7 +30,9 @@ const IndexPage = ({ data }) => (
           })}
         </Carousel>
       </div>
+      <Sponsors />
     </div>
+    <Footer />
   </Layout>
 )
 
