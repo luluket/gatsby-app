@@ -1,12 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { FaFacebookSquare } from "react-icons/fa"
-import { FaTwitterSquare } from "react-icons/fa"
-import { FaRedditSquare } from "react-icons/fa"
 import Img from "gatsby-image"
 import "./product-template.css"
-
+import { FaCartArrowDown } from "react-icons/fa"
 const ComponentName = ({ data }) => {
   return (
     <Layout>
@@ -35,10 +32,14 @@ const ComponentName = ({ data }) => {
             <div className="h3">{data.product.price} kn</div>
             <hr></hr>
 
-            <button className="btn btn-primary">Add to cart</button>
+            <button className="btn btn-primary d-flex">
+              <FaCartArrowDown className="align-self-center mr-2" />
+              Add to cart
+            </button>
           </div>
         </div>
-        <div className="h4">{data.product.info}</div>
+        <hr></hr>
+        <div className="h5">{data.product.info}</div>
       </section>
     </Layout>
   )

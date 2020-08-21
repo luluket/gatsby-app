@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import { GiBiceps } from "react-icons/gi"
 import { FaCartArrowDown } from "react-icons/fa"
-import logo from "../images/logo.png"
 
 export default class navbar extends Component {
   state = {

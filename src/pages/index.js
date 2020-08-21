@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,7 +14,7 @@ const IndexPage = ({ data }) => (
       <SEO title="Healthy&Fit" />
       <Title title="Be healthy, stay strong" />
       <div>
-        <Carousel>
+        <Carousel interval="3000">
           {data.allFile.nodes.map(node => {
             return (
               <Carousel.Item>
