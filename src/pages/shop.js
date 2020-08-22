@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Title from "../components/title"
 import "../components/shop.css"
+import Sponsors from "../components/sponsors.js"
+import Footer from "../components/footer.js"
 const getCategories = items => {
   let tempItems = items.map(items => {
     return items.category
@@ -50,8 +52,8 @@ export default class shoptest extends Component {
   render() {
     return (
       <Layout>
-        <div class="container">
-          <Title title="Shop"></Title>
+        <Title title="Shop"></Title>
+        <div class="container my-5">
           <div className="row mb-5">
             <div className="col-10 mx-auto text-center">
               {this.state.categories.map((category, index) => {
@@ -97,6 +99,8 @@ export default class shoptest extends Component {
             })}
           </div>
         </div>
+        <Sponsors />
+        <Footer />
       </Layout>
     )
   }

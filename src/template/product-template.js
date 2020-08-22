@@ -9,10 +9,10 @@ const ComponentName = ({ data }) => {
     <Layout>
       <section className="container py-3">
         <div className="products-content d-flex">
-          <div className="col-6 p-0 mb-2">
+          <div className="col-6 p-0 mb-2 ">
             <Img
               fluid={data.product.image.childImageSharp.fluid}
-              className=" mr-3"
+              className=""
             ></Img>
           </div>
           <div className="col-6">

@@ -12,9 +12,10 @@ import Footer from "../components/footer.js"
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Title title="Be healthy, stay strong" />
+
     <div class="container">
       <SEO title="Healthy&Fit" />
-      <Title title="Be healthy, stay strong" />
       <div>
         <Carousel interval="3000">
           {data.allFile.nodes.map(node => {

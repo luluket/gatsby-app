@@ -48,7 +48,10 @@ export default class navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-light navbar-light">
+      <nav
+        className="navbar navbar-expand-sm navbar-light"
+        style={{ backgroundColor: "hsl(212, 33%, 89%)" }}
+      >
         <Link to="/" className="navbar-brand">
           <GiBiceps id="logo" />
           {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon

@@ -12,7 +12,7 @@ const ComponentName = ({ data }) => {
   const { content } = data.blog
   return (
     <Layout>
-      <section className="container py-3">
+      <section className="container py-5">
         <div className="blog-content">
           <div className="d-flex">
             <div className="mr-3">
@@ -31,9 +31,9 @@ const ComponentName = ({ data }) => {
           <hr className="mb-0"></hr>
           <ReactMarkdown source={content} />
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center bg-light py-5">
           <div
-            className="d-flex align-content-center"
+            className="d-flex align-content-center "
             style={{ fontSize: "32px" }}
           >
             <FaFacebookSquare />

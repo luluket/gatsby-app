@@ -2,6 +2,9 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
+import Sponsors from "../components/sponsors.js"
+import Footer from "../components/footer.js"
+import Title from "../components/title.js"
 const Blog = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
@@ -9,7 +12,10 @@ const Blog = ({
 }) => {
   return (
     <Layout>
+      <Title title="blogs" />
       <Blogs blogs={blogs} title="blog"></Blogs>
+      <Sponsors />
+      <Footer />
     </Layout>
   )
 }
