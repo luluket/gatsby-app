@@ -5,10 +5,11 @@ import SEO from "../components/seo"
 import "../components/bootstrap.css"
 import Title from "../components/title"
 import { Carousel } from "react-bootstrap"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Sponsors from "../components/sponsors.js"
 import Footer from "../components/footer.js"
+import Subtitle from "../components/subtitle.js"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -16,20 +17,54 @@ const IndexPage = ({ data }) => (
 
     <div class="container">
       <SEO title="Healthy&Fit" />
-      <div>
-        <Carousel interval="3000">
-          {data.allFile.nodes.map(node => {
+
+      <Carousel interval="3000">
+        {data.allFile.nodes.map(node => {
+          return (
+            <Carousel.Item>
+              <Img
+                fluid={node.childImageSharp.fluid}
+                className="d-block w-100"
+              />
+              <Carousel.Caption />
+            </Carousel.Item>
+          )
+        })}
+      </Carousel>
+      <Subtitle subtitle="We recommend" />
+      <div className="d-flex flex-column">
+        <div className="products-container d-flex justify-content-lg-center pb-5 flex-wrap">
+          {data.products.nodes.map(product => {
             return (
-              <Carousel.Item>
-                <Img
-                  fluid={node.childImageSharp.fluid}
-                  className="d-block w-100"
-                />
-                <Carousel.Caption />
-              </Carousel.Item>
+              <div
+                key={product.id}
+                className="card col-lg-3 col-md-4 col-sm-6 col-6 p-1 border-0"
+              >
+                <Link
+                  to={`/shop/${product.slug}`}
+                  className="text-decoration-none text-dark"
+                  key={product.id}
+                >
+                  <div class="card-header h-auto p-0">
+                    <Img fluid={product.image.childImageSharp.fluid}></Img>
+                  </div>
+                  <div class="card-body border">
+                    <h5>{product.title}</h5>
+                  </div>
+                  <div class="card-footer">
+                    <span>{product.price} kn</span>
+                  </div>
+                </Link>
+              </div>
             )
           })}
-        </Carousel>
+        </div>
+
+        <div className="d-flex justify-content-center pb-5">
+          <Link to="/shop" className="btn btn-info">
+            See more
+          </Link>
+        </div>
       </div>
       <Sponsors />
     </div>
@@ -49,6 +84,27 @@ export const query = graphql`
         }
       }
     }
+
+    products: allStrapiProducts(
+      limit: 3
+      filter: { category: { eq: "vitamins" } }
+    ) {
+      nodes {
+        id
+        price
+        slug
+        title
+        category
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
   }
 `
+
 export default IndexPage
