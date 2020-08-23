@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { GiBiceps } from "react-icons/gi"
 import { FaCartArrowDown } from "react-icons/fa"
 
-export default class navbar extends Component {
+export default class Navbar extends Component {
   state = {
     navbarOpen: false,
     css: "collapse navbar-collapse",
