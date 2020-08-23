@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Footer from "../components/footer"
+import Sponsors from "../components/sponsors"
 import ReactMarkdown from "react-markdown"
 import { FaFacebookSquare } from "react-icons/fa"
 import { FaTwitterSquare } from "react-icons/fa"
@@ -12,7 +14,7 @@ const ComponentName = ({ data }) => {
   const { content } = data.blog
   return (
     <Layout>
-      <section className="container py-5">
+      <section className="container pt-5">
         <div className="blog-content">
           <div className="d-flex">
             <div className="mr-3">
@@ -41,7 +43,9 @@ const ComponentName = ({ data }) => {
             <FaRedditSquare />
           </div>
         </div>
+        <Sponsors />
       </section>
+      <Footer />
     </Layout>
   )
 }

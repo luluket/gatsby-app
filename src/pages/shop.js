@@ -53,7 +53,7 @@ export default class shoptest extends Component {
     return (
       <Layout>
         <Title title="Shop"></Title>
-        <div class="container my-5">
+        <div class="container mt-5">
           <div className="row mb-5">
             <div className="col-10 mx-auto text-center">
               {this.state.categories.map((category, index) => {
@@ -72,7 +72,7 @@ export default class shoptest extends Component {
               })}
             </div>
           </div>
-          <div className="products-container d-flex flex-wrap ">
+          <div className="products-container d-flex flex-wrap pb-5">
             {this.state.shopItems.map(product => {
               return (
                 <div
@@ -98,8 +98,9 @@ export default class shoptest extends Component {
               )
             })}
           </div>
+          <Sponsors />
         </div>
-        <Sponsors />
+
         <Footer />
       </Layout>
     )

@@ -13,15 +13,17 @@ const Blog = ({
   return (
     <Layout>
       <Title title="blogs" />
-      <Blogs blogs={blogs} title="blog"></Blogs>
-      <Sponsors />
+      <div className="container">
+        <Blogs blogs={blogs} title="blog"></Blogs>
+        <Sponsors />
+      </div>
       <Footer />
     </Layout>
   )
 }
 export const query = graphql`
   {
-    allStrapiBlogs {
+    allStrapiBlogs(sort: { order: DESC, fields: date }) {
       nodes {
         date(formatString: "DD/MM/YYYY")
         desc

@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Img from "gatsby-image"
+import Footer from "../components/footer"
+import Sponsors from "../components/sponsors"
 import "./product-template.css"
 import { FaCartArrowDown } from "react-icons/fa"
 const ComponentName = ({ data }) => {
@@ -39,8 +41,10 @@ const ComponentName = ({ data }) => {
           </div>
         </div>
         <hr></hr>
-        <div className="h5">{data.product.info}</div>
+        <div className="h5 pb-5">{data.product.info}</div>
+        <Sponsors />
       </section>
+      <Footer />
     </Layout>
   )
 }

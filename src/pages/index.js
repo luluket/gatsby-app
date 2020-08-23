@@ -10,6 +10,7 @@ import Img from "gatsby-image"
 import Sponsors from "../components/sponsors.js"
 import Footer from "../components/footer.js"
 import Subtitle from "../components/subtitle.js"
+import Blogs from "../components/Blogs"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -32,7 +33,7 @@ const IndexPage = ({ data }) => (
         })}
       </Carousel>
       <Subtitle subtitle="We recommend" />
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column pt-5">
         <div className="products-container d-flex justify-content-lg-center pb-5 flex-wrap">
           {data.products.nodes.map(product => {
             return (
@@ -60,11 +61,18 @@ const IndexPage = ({ data }) => (
           })}
         </div>
 
-        <div className="d-flex justify-content-center pb-5">
+        <div className="d-flex justify-content-center ">
           <Link to="/shop" className="btn btn-info">
             See more
           </Link>
         </div>
+      </div>
+      <Subtitle subtitle="Latest posts" />
+      <Blogs blogs={data.blogs.nodes} title="blog"></Blogs>
+      <div className="d-flex justify-content-center pb-5">
+        <Link to="/blog" className="btn btn-info">
+          See more
+        </Link>
       </div>
       <Sponsors />
     </div>
@@ -102,6 +110,24 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    blogs: allStrapiBlogs(limit: 3, sort: { order: DESC, fields: date }) {
+      nodes {
+        date(formatString: "DD/MM/YYYY")
+        desc
+        id
+        slug
+        title
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        content
+        category
       }
     }
   }
