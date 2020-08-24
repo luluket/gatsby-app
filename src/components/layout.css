@@ -84,14 +84,16 @@ h6 {
   width: 3rem;
   height: 3rem;
 }
-.carousel-item {
-  width: 100%;
-  height: 100%;
-}
+
 .carousel-indicators li {
   display: none;
 }
 .card:hover {
   transform: scale(1.02);
   transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 605px) {
+  .perks {
+    flex-direction: column;
+  }
 }

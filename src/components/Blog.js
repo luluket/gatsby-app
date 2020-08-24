@@ -14,10 +14,7 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
           <Image fluid={image.childImageSharp.fluid} className="h-100"></Image>
         </Link>
       </div>
-      <div
-        className="card-footer h-50 d-flex flex-column justify-content-between"
-        style={{ overflowY: "scroll", overflowX: "hidden" }}
-      >
+      <div className="card-footer h-50 d-flex flex-column justify-content-between">
         <div className="font-weight-bold">{title}</div>
         <p className="">{desc}</p>
         <div className="d-flex justify-content-between">

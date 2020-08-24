@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import { GiBiceps } from "react-icons/gi"
 import { FaCartArrowDown } from "react-icons/fa"
+import logo from "../images/logo.png"
 
 export default class Navbar extends Component {
   state = {
@@ -52,11 +53,9 @@ export default class Navbar extends Component {
         className="navbar navbar-expand-sm navbar-light"
         style={{ backgroundColor: "hsl(212, 33%, 89%)" }}
       >
-        <Link to="/" className="navbar-brand">
-          <GiBiceps id="logo" />
-          {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
-            Creative Commons (Attribution 3.0 Unported);
-            https://www.iconfinder.com/webalys} */}
+        <Link to="/" className="navbar-brand p-0 d-flex align-content-center">
+          {/* <GiBiceps id="logo" /> */}
+          <img src={logo} style={{ height: "48px", width: "100px" }} />
         </Link>
         <button
           className="navbar-toggler"

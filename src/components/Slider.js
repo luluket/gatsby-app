@@ -7,8 +7,10 @@ export default function Slider({ data }) {
       {data.map(node => {
         return (
           <Carousel.Item>
-            <Img fluid={node.childImageSharp.fluid} className="d-block w-100" />
-            <Carousel.Caption />
+            <Img
+              fluid={node.childImageSharp.fluid}
+              className="w-100 d-block h-auto mw-100"
+            />
           </Carousel.Item>
         )
       })}

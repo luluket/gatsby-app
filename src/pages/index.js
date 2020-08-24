@@ -12,14 +12,17 @@ import Subtitle from "../components/Subtitle.js"
 import Blogs from "../components/Blogs"
 import Products from "../components/Products"
 import Slider from "../components/Slider"
+import Perks from "../components/Perks"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Title title="Be healthy, stay strong" />
+    <SEO title="Healthy&Fit" />
+    <Title title="Fitness Facility"></Title>
+    <hr className="m-0"></hr>
+    <Perks />
     <div class="container">
-      <SEO title="Healthy&Fit" />
       <Slider data={data.allFile.nodes} />
-      <hr></hr>
+
       <Subtitle subtitle="We recommend" />
       <Products items={data.products.nodes} />
       <Subtitle subtitle="Latest posts" />
@@ -37,9 +40,10 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    allFile(filter: { relativeDirectory: { eq: "carousel" } }) {
+    allFile(filter: { relativeDirectory: { eq: "slider" } }) {
       nodes {
         id
+        relativePath
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
