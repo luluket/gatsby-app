@@ -126,11 +126,6 @@ export default class Products extends Component {
               )
             })}
           </div>
-          <div className="d-flex justify-content-center ">
-            <Link to="/shop" className="btn btn-info">
-              See more
-            </Link>
-          </div>
         </div>
       )
     }

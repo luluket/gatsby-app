@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
-import Subtitle from "../components/subtitle"
+import Title from "../components/title"
 import Sponsors from "../components/sponsors.js"
 export default function contact() {
   return (
     <Layout>
-      <div className="container">
-        <Subtitle subtitle="Kontaktirajte nas"></Subtitle>
+      <Title title="Kontaktirajte nas"></Title>
+
+      <div className="container mt-3">
         <div className="font-weight-bold py-2">+385 21 344 6859</div>
         <div className="font-weight-bold py-2">
           Ruđera Boškovića 32, 10000 Split

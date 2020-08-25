@@ -13,7 +13,7 @@ export default function footer() {
     >
       <div className="social-links-section">
         <div class="note text-white h4">
-          <span>Connect with us &nbsp;</span>
+          <span>Poveži se &nbsp;</span>
         </div>
         <div className="d-flex mt-2">
           <div className="mr-2">
@@ -99,7 +99,7 @@ export default function footer() {
       </div>
       <div className="payment-section">
         <div className="note h4 text-white">
-          <span>Pay safely with &nbsp;</span>
+          <span>Sigurna naplata &nbsp;</span>
         </div>
         <div className="d-flex mt-2">
           <div className="mr-2">

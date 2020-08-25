@@ -11,9 +11,9 @@ const Blog = ({
 }) => {
   return (
     <Layout>
-      <Title title="blogs" />
+      <Title title="Blog" />
       <div className="container">
-        <Blogs blogs={blogs} title="blog"></Blogs>
+        <Blogs blogs={blogs}></Blogs>
         <Sponsors />
       </div>
     </Layout>
