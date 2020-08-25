@@ -22,9 +22,6 @@ h6 {
   font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.25rem !important;
 }
-.text-yellow {
-  color: var(--mainYellow);
-}
 .navbar-brand {
   transition: all 0.2s ease-in-out;
 }
@@ -38,7 +35,7 @@ h6 {
   border-bottom: 3px solid;
 }
 .show .nav-link {
-  /*ovo je potrebno za mobilnu verziju kad su meni stavke jedna ispod druge u navbaru*/
+  /*ovo je potrebno za mobilnu verziju kad su stavke jedna ispod druge u navbaru*/
   display: inline-block;
 }
 .cart-icon {
@@ -49,40 +46,6 @@ h6 {
 }
 .cart-icon:hover {
   transform: scale(1.1);
-}
-.default-background,
-.about-background {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1 !important;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
-  background-position: center;
-  background-size: cover;
-}
-.about-background {
-  min-height: 60vh; /* jedina promjena u odnosu na default-background*/
-}
-.btn-yellow {
-  /*dodaje se !important jer klasa btn pogazi svojstva ove klase*/
-  color: var(--mainYellow) !important;
-  border-color: var(--mainYellow) !important;
-}
-.btn-yellow:hover {
-  background: var(--mainYellow) !important;
-  color: var(--mainBrown) !important;
-}
-.footer {
-  background: var(--mainBrown);
-}
-.menu,
-.contact {
-  background: var(--mainGrey);
-}
-#logo {
-  width: 3rem;
-  height: 3rem;
 }
 
 .carousel-indicators li {

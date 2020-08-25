@@ -1,8 +1,8 @@
 import React from "react"
-import truck from "../images/fast-delivery.svg"
-import whey from "../images/whey.svg"
-import gym from "../images/gym.svg"
-import blog from "../images/blogging.svg"
+import truck from "../images/perks/fast-delivery.svg"
+import whey from "../images/perks/whey.svg"
+import gym from "../images/perks/gym.svg"
+import blog from "../images/perks/blogging.svg"
 export default function Perks() {
   return (
     <div className="perks bg-light mx-auto d-flex justify-content-center">

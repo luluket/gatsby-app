@@ -84,12 +84,13 @@ export default class Navbar extends Component {
             {/*using snipcart service by adding class*/}
             <FaCartArrowDown className="cart-icon snipcart-checkout" />
           </div>
-          <button
-            id="login-button"
-            className="btn text-uppercase btn-outline-dark"
-          >
+
+          <Link to="/login" className="btn">
             login
-          </button>
+          </Link>
+          <Link to="/signup" className="btn btn-secondary">
+            sing up
+          </Link>
         </div>
       </nav>
     )
