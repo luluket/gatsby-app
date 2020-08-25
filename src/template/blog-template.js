@@ -45,7 +45,6 @@ const ComponentName = ({ data }) => {
         </div>
         <Sponsors />
       </section>
-      <Footer />
     </Layout>
   )
 }

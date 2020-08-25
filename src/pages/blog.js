@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import Sponsors from "../components/sponsors.js"
-import Footer from "../components/footer.js"
 import Title from "../components/title.js"
 const Blog = ({
   data: {
@@ -17,7 +16,6 @@ const Blog = ({
         <Blogs blogs={blogs} title="blog"></Blogs>
         <Sponsors />
       </div>
-      <Footer />
     </Layout>
   )
 }

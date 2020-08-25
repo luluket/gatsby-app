@@ -44,7 +44,6 @@ const ComponentName = ({ data }) => {
         <div className="h5 pb-5">{data.product.info}</div>
         <Sponsors />
       </section>
-      <Footer />
     </Layout>
   )
 }

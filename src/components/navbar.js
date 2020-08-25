@@ -19,20 +19,21 @@ export default class Navbar extends Component {
         path: "/training",
         text: "training",
       },
+
       {
         id: 3,
-        path: "/nutrition",
-        text: "nutrition",
-      },
-      {
-        id: 4,
         path: "/shop",
         text: "shop",
       },
       {
-        id: 5,
+        id: 4,
         path: "/blog",
         text: "blog",
+      },
+      {
+        id: 5,
+        path: "/contact",
+        text: "contact",
       },
     ],
   }

@@ -5,7 +5,6 @@ import SEO from "../components/Seo"
 import Title from "../components/Title"
 import { graphql, Link } from "gatsby"
 import Sponsors from "../components/Sponsors.js"
-import Footer from "../components/Footer.js"
 import Subtitle from "../components/Subtitle.js"
 import Blogs from "../components/Blogs"
 import Products from "../components/Products"
@@ -32,7 +31,6 @@ const IndexPage = ({ data }) => (
       </div>
       <Sponsors />
     </div>
-    <Footer />
   </Layout>
 )
 
