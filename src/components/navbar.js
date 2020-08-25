@@ -87,10 +87,10 @@ export default class Navbar extends Component {
           </div>
 
           <Link to="/login" className="btn">
-            login
+            Login
           </Link>
           <Link to="/signup" className="btn btn-secondary">
-            sing up
+            Sign up
           </Link>
         </div>
       </nav>

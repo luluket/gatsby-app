@@ -1,17 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import logo from "../images/logo.png"
+
 export default function signup() {
   return (
     <div className="container d-flex flex-column align-items-center">
-      <div
-        className="bg-light d-flex flex-column"
-        style={{
-          width: "400px",
-          height: "450px",
-          padding: "1.5rem",
-          marginTop: "3rem",
-        }}
-      >
+      <div className="d-flex mt-5">
+        <img src={logo} className="mw-100 h-auto"></img>
+      </div>
+      <div className="bg-light d-flex flex-column p-5 mt-5">
         <h3>sign up</h3>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Full name" />
@@ -37,7 +34,7 @@ export default function signup() {
           Sign up
         </button>
       </div>
-      <Link to="/" className="btn btn-info mt-3">
+      <Link to="/" className="btn btn-info mt-3 d-block">
         Back to home
       </Link>
     </div>

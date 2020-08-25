@@ -1,18 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import logo from "../images/logo.png"
 
 export default function login() {
   return (
     <div className="container d-flex flex-column align-items-center">
-      <div
-        className="bg-light d-flex flex-column"
-        style={{
-          width: "400px",
-          height: "300px",
-          padding: "1.5rem",
-          marginTop: "3rem",
-        }}
-      >
+      <div className="d-flex mt-5">
+        <img src={logo} className="mw-100 h-auto"></img>
+      </div>
+      <div className="bg-light d-flex flex-column p-5 mt-5">
         <h3>login</h3>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Username" />
