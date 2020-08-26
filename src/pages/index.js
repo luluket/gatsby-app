@@ -28,9 +28,9 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <div className="p-5 d-flex flex-column align-items-center">
+      <div className="pt-5 d-flex flex-column align-items-center">
         <h2 className="text-center">
-          Mršavljenje ili izgradnja? Pronađite odgovarajući plan treninga?
+          Mršavljenje ili izgradnja? Pronađite odgovarajući plan treninga...
         </h2>
         <Link to="/training" className="btn btn-info">
           Plan treninga
@@ -45,12 +45,13 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <div className=" d-flex flex-column align-items-center p-5">
+      <div className=" d-flex flex-column align-items-center pt-5">
         <h2 className="text-center">Imate pitanje? Kontaktirajte nas...</h2>
         <Link to="/contact" className="btn btn-info">
           Kontakt
         </Link>
       </div>
+      <hr></hr>
       <Sponsors />
     </div>
   </Layout>
