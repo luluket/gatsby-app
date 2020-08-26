@@ -24,6 +24,11 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      trainings: allStrapiTrainings {
+        nodes {
+          title
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -44,6 +49,15 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve(`src/template/product-template.js`),
         context: {
           slug: product.slug,
+        },
+      })
+    })
+    result.data.trainings.nodes.forEach(training => {
+      createPage({
+        path: `/training/${training.title}`,
+        component: path.resolve(`src/template/training-template.js`),
+        context: {
+          title: training.title,
         },
       })
     })

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Footer from "../components/footer"
 import Sponsors from "../components/sponsors"
 import ReactMarkdown from "react-markdown"
 import { FaFacebookSquare } from "react-icons/fa"

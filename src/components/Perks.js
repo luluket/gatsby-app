@@ -12,6 +12,7 @@ export default function Perks() {
             src={truck}
             className="align-self-start"
             style={{ width: "40px", height: "40px" }}
+            alt=""
           />
         </div>
         <div className="align-self-center">Brza dostava</div>
@@ -23,6 +24,7 @@ export default function Perks() {
             src={whey}
             className="align-self-center"
             style={{ width: "40px", height: "40px" }}
+            alt=""
           />
         </div>
         <div className="align-self-center">10 proizvoda</div>
@@ -34,6 +36,7 @@ export default function Perks() {
             src={gym}
             className="align-self-center"
             style={{ width: "40px", height: "40px" }}
+            alt=""
           />
         </div>
         <div className="align-self-center">Trening savjeti</div>
@@ -45,6 +48,7 @@ export default function Perks() {
             src={blog}
             className="align-self-center"
             style={{ width: "40px", height: "40px" }}
+            alt=""
           />
         </div>
         <div className="align-self-center">Fitness blog</div>

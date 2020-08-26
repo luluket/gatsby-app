@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { GiBiceps } from "react-icons/gi"
 import { FaCartArrowDown } from "react-icons/fa"
 import logo from "../images/logo.png"
 
@@ -56,7 +55,7 @@ export default class Navbar extends Component {
       >
         <Link to="/" className="navbar-brand p-0 d-flex align-content-center">
           {/* <GiBiceps id="logo" /> */}
-          <img src={logo} style={{ height: "48px", width: "100px" }} />
+          <img src={logo} style={{ height: "48px", width: "100px" }} alt="" />
         </Link>
         <button
           className="navbar-toggler"

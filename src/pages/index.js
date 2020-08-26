@@ -71,7 +71,7 @@ export const query = graphql`
 
     products: allStrapiProducts(
       limit: 3
-      filter: { category: { eq: "vitamins" } }
+      filter: { category: { eq: "vitamini" } }
     ) {
       nodes {
         id

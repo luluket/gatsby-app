@@ -6,7 +6,7 @@ export default function login() {
   return (
     <div className="container d-flex flex-column align-items-center">
       <div className="d-flex mt-5">
-        <img src={logo} className="mw-100 h-auto"></img>
+        <img src={logo} className="mw-100 h-auto" alt=""></img>
       </div>
       <div className="bg-light d-flex flex-column p-5 mt-5">
         <h3>login</h3>

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
-import Layout from "./Layout"
 import { Link } from "gatsby"
-import Title from "./Title"
 import "./shop.css"
 const getCategories = items => {
   let tempItems = items.map(items => {
@@ -41,7 +39,7 @@ export default class Products extends Component {
       })
     } else {
       //filtering items according to categories
-      let items = tempItems.filter(node => node.category == category) //compare every item on menu to category we passed in handleItem
+      let items = tempItems.filter(node => node.category === category) //compare every item on menu to category we passed in handleItem
       this.setState(() => {
         return { shopItems: items } //shop items have been filtered
       })

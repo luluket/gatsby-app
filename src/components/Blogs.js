@@ -1,5 +1,4 @@
 import React from "react"
-import Title from "./Title"
 import Blog from "./Blog"
 export const Blogs = ({ blogs, title }) => {
   return (
