@@ -50,7 +50,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-sm navbar-light"
+        className="navbar navbar-expand-md navbar-light w-100"
         style={{ backgroundColor: "hsl(212, 33%, 89%)" }}
       >
         <Link to="/" className="navbar-brand p-0 d-flex align-content-center">
@@ -80,14 +80,13 @@ export default class Navbar extends Component {
               )
             })}
           </ul>
-          <div className="nav-item mr-3 my-1">
-            {/*using snipcart service by adding class*/}
-            <FaCartArrowDown className="cart-icon snipcart-checkout" />
-          </div>
+
+          <FaCartArrowDown className="cart-icon" />
 
           <Link to="/login" className="btn">
             Login
           </Link>
+
           <Link to="/signup" className="btn btn-secondary">
             Sign up
           </Link>

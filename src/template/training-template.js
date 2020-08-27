@@ -29,6 +29,7 @@ const ComponentName = ({ data }) => {
                         <img
                           src={exercise.image.publicURL}
                           className="mw-100 h-auto"
+                          alt=""
                         ></img>
                       </div>
                       <div>
