@@ -1,10 +1,14 @@
 :root {
   --mainBrown: #2d1e1f;
-  --mainYellow: rgb(255, 158, 9);
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
   --mainDark: #222;
-  --tirkiz: rgb(9, 242, 255);
+
+  --clr-primary-9: hsl(185, 94%, 87%);
+  --clr-primary-10: hsl(186, 100%, 94%);
+
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
 }
 
 body {
@@ -19,9 +23,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courier New", Courier, monospace !important;
-  letter-spacing: 0.25rem !important;
+  letter-spacing: 0.1rem !important;
 }
+
+/*Navigacijska traka*/
 .navbar-brand {
   transition: all 0.2s ease-in-out;
 }
@@ -48,15 +53,103 @@ h6 {
   transform: scale(1.1);
 }
 
+/*Carousel*/
 .carousel-indicators li {
   display: none;
 }
+
+/*Card*/
 .card:hover {
   transform: scale(1.02);
   transition: 0.5s ease-in-out;
 }
+
+/*Perks*/
 @media screen and (max-width: 605px) {
   .perks {
     flex-direction: column;
+  }
+}
+
+/*Blog template*/
+.blog-content h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.blog-content h2 {
+  font-size: 1.5rem;
+}
+.blog-content ul {
+  margin-top: 2rem;
+  display: inline-block;
+}
+.blog-content ul li {
+  background: var(--clr-grey-9);
+  color: var(--clr-grey-5);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.blog-content blockquote {
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  line-height: 2;
+  padding: 0.5rem;
+  color: var(--clr-primary-5);
+}
+.blog-content pre {
+  background: #222;
+  color: yellow;
+  overflow-x: scroll;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+}
+.blog-content p {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 13px;
+}
+@media screen and (min-width: 846px) {
+  .blog-content img {
+    width: 100%;
+    height: 30rem;
+    margin: 2rem 0;
+  }
+}
+@media screen and (max-width: 845px) {
+  .blog-content img {
+    width: 100%;
+    height: 75%;
+    margin: 2rem 0;
+  }
+}
+/*Sponsors*/
+@media screen and (max-width: 460px) {
+  .row {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .row .col-6 {
+    max-width: 100%;
+  }
+}
+
+/*Footer*/
+@media screen and (max-width: 503px) {
+  .footer-container {
+    flex-direction: column !important;
+  }
+  .social-links-section {
+    display: flex;
+    align-items: center;
+  }
+  .payment-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
   }
 }

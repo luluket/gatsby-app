@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import Subtitle from "../components/Subtitle"
 const ComponentName = ({ data }) => {
-  const { training } = data.training
   return (
     <Layout>
       <div className="container">
@@ -12,8 +11,8 @@ const ComponentName = ({ data }) => {
           {data.training.day.map(day => {
             return (
               <li className="list-group-item p-0">
-                <h3 className="text-center bg-light m-0">{day.day}</h3>
-                <h4 className="text-center font-weight-bold bg-light m-0">
+                <h3 className="text-center bg-light m-0 p-1">{day.day}</h3>
+                <h4 className="text-center font-weight-bold bg-light m-0 p-1">
                   {day.part}
                 </h4>
                 {day.exercises.map(exercise => {

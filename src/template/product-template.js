@@ -3,14 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Img from "gatsby-image"
 import Sponsors from "../components/sponsors"
-import "./product-template.css"
 import { FaCartArrowDown } from "react-icons/fa"
 const ComponentName = ({ data }) => {
   return (
     <Layout>
-      <section className="container py-3">
-        <div className="products-content d-flex">
-          <div className="col-6 p-0 mb-2 ">
+      <section className="container py-3 ">
+        <div className="row">
+          <div className="col-6 mb-2 ">
             <Img
               fluid={data.product.image.childImageSharp.fluid}
               className=""

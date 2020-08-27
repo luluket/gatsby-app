@@ -1,9 +1,8 @@
 import React from "react"
-import "./footer.css"
 export default function footer() {
   return (
     <div
-      class="footer-container p-3 d-flex justify-content-around"
+      className="footer-container p-3 d-flex justify-content-around"
       style={{
         backgroundColor: "#454749",
         bottom: "0",
@@ -11,7 +10,7 @@ export default function footer() {
         left: "0",
       }}
     >
-      <div className="social-links-section">
+      <div className="social-links-section ">
         <div class="note text-white h4">
           <span>Poveži se &nbsp;</span>
         </div>
@@ -97,11 +96,11 @@ export default function footer() {
           </div>
         </div>
       </div>
-      <div className="payment-section">
+      <div className="payment-section ">
         <div className="note h4 text-white">
           <span>Sigurna naplata &nbsp;</span>
         </div>
-        <div className="d-flex mt-2">
+        <div className="d-flex">
           <div className="mr-2">
             <svg
               style={{ backgroundColor: "white" }}

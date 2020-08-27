@@ -7,8 +7,6 @@ import { FaFacebookSquare } from "react-icons/fa"
 import { FaTwitterSquare } from "react-icons/fa"
 import { FaRedditSquare } from "react-icons/fa"
 
-import "./blog-template.css"
-
 const ComponentName = ({ data }) => {
   const { content } = data.blog
   return (

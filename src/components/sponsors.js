@@ -1,5 +1,4 @@
 import React from "react"
-import "./sponsors.css"
 
 export default function sponsors() {
   return (

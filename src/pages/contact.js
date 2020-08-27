@@ -30,10 +30,7 @@ export default function contact() {
           o našoj usluzi, čak i nove ideje čine vaše iskustvo s nama još boljim
           i uvijek su dobrodošli.
         </p>
-        <div
-          className="row"
-          // style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
-        >
+        <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-6">
             <h6 className="border-bottom p-2">Pomoć i informacije</h6>
             <ul className="list-group-flush">

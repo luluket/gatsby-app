@@ -10,16 +10,16 @@ import Blogs from "../components/Blogs"
 import Products from "../components/Products"
 import Slider from "../components/Slider"
 import Perks from "../components/Perks"
+import SeeMore from "../components/SeeMore"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Healthy&Fit" />
+    <SEO title="Fitness Facility" />
     <Title title="Fitness Facility"></Title>
     <hr className="m-0"></hr>
     <Perks />
     <div class="container">
       <Slider data={data.allFile.nodes} />
-
       <Subtitle subtitle="Naše preporuke" />
       <Products items={data.products.nodes} />
       <div className="d-flex justify-content-center ">
@@ -28,14 +28,7 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <div className="pt-5 d-flex flex-column align-items-center">
-        <h2 className="text-center">
-          Mršavljenje ili izgradnja? Pronađite odgovarajući plan treninga...
-        </h2>
-        <Link to="/training" className="btn btn-info">
-          Plan treninga
-        </Link>
-      </div>
+      <SeeMore text="Mršavljenje ili izgradnja? Pronađite vaš plan treninga" />
       <hr></hr>
       <Subtitle subtitle="Zadnje objave" />
       <Blogs blogs={data.blogs.nodes} title="blog"></Blogs>
@@ -45,12 +38,7 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <div className=" d-flex flex-column align-items-center pt-5">
-        <h2 className="text-center">Imate pitanje? Kontaktirajte nas...</h2>
-        <Link to="/contact" className="btn btn-info">
-          Kontakt
-        </Link>
-      </div>
+      <SeeMore text="Imate pitanje? Kontaktirajte nas..." />
       <hr></hr>
       <Sponsors />
     </div>

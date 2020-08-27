@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import "./shop.css"
 const getCategories = items => {
   let tempItems = items.map(items => {
     return items.category
@@ -67,7 +66,7 @@ export default class Products extends Component {
               })}
             </div>
           </div>
-          <div className="products-container d-flex flex-wrap pb-5">
+          <div className="row">
             {this.state.shopItems.map(product => {
               return (
                 <div
@@ -98,7 +97,7 @@ export default class Products extends Component {
     } else {
       return (
         <div class="container mt-5">
-          <div className="products-container d-flex flex-wrap pb-5">
+          <div className="row">
             {this.state.shopItems.map(product => {
               return (
                 <div
