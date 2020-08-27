@@ -14,6 +14,7 @@ const Blog = ({
       <Title title="Blog" />
       <div className="container">
         <Blogs blogs={blogs}></Blogs>
+        <hr></hr>
         <Sponsors />
       </div>
     </Layout>

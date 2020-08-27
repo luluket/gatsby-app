@@ -28,7 +28,11 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <SeeMore text="Mršavljenje ili izgradnja? Pronađite vaš plan treninga" />
+      <SeeMore
+        text="Mršavljenje ili izgradnja? Pronađite vaš plan treninga"
+        button="Plan treninga"
+        link="/training"
+      />
       <hr></hr>
       <Subtitle subtitle="Zadnje objave" />
       <Blogs blogs={data.blogs.nodes} title="blog"></Blogs>
@@ -38,7 +42,11 @@ const IndexPage = ({ data }) => (
         </Link>
       </div>
       <hr></hr>
-      <SeeMore text="Imate pitanje? Kontaktirajte nas..." />
+      <SeeMore
+        text="Imate pitanje? Kontaktirajte nas..."
+        button="Kontakt"
+        link="/contact"
+      ></SeeMore>
       <hr></hr>
       <Sponsors />
     </div>

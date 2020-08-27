@@ -11,6 +11,7 @@ export default function shop({ data }) {
       <Title title="Shop"></Title>
       <div class="container">
         <Products items={data.products.nodes} />
+        <hr></hr>
         <Sponsors />
       </div>
     </Layout>

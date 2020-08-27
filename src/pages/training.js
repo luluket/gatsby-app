@@ -9,6 +9,7 @@ export default function training({ data }) {
       <Title title="Vaši ciljevi"></Title>
       <div className="container">
         <Trainings data={data.trainings.nodes} />
+        <hr></hr>
         <Sponsors />
       </div>
     </Layout>
