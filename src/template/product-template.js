@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import Img from "gatsby-image"
 import Sponsors from "../components/sponsors"
 import { FaCartArrowDown } from "react-icons/fa"
+import ReactMarkdown from "react-markdown"
 const ComponentName = ({ data }) => {
   return (
     <Layout>
@@ -39,7 +40,7 @@ const ComponentName = ({ data }) => {
           </div>
         </div>
         <hr></hr>
-        <div className="h5 pb-5">{data.product.info}</div>
+        <ReactMarkdown source={data.product.description} />
         <Sponsors />
       </section>
     </Layout>
@@ -52,6 +53,7 @@ export const query = graphql`
       title
       info
       category
+      description
       price
       image {
         childImageSharp {
