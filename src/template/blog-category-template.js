@@ -37,7 +37,10 @@ const BlogFiltered = ({
 
 export const query = graphql`
   query GetAllStrapiBlogs($category: String) {
-    allStrapiBlogs(filter: { category: { eq: $category } }) {
+    allStrapiBlogs(
+      filter: { category: { eq: $category } }
+      sort: { order: DESC, fields: date }
+    ) {
       nodes {
         date(formatString: "DD/MM/YYYY")
         desc

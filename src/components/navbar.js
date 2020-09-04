@@ -50,7 +50,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-md navbar-light w-100"
+        className="navbar navbar-expand-md navbar-light  w-100"
         style={{ backgroundColor: "hsl(212, 33%, 89%)" }}
       >
         <Link to="/" className="navbar-brand p-0 d-flex align-content-center">
@@ -71,8 +71,9 @@ export default class Navbar extends Component {
                 <li key={link.id} className="nav-item">
                   <Link
                     to={link.path}
-                    className="nav-link text-uppercase mr-3"
+                    className="nav-link text-uppercase mr-3 text-dark"
                     activeStyle={{ borderBottom: "3px solid" }}
+                    style={{ fontSize: "18px" }}
                   >
                     {link.text}
                   </Link>
