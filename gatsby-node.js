@@ -29,6 +29,11 @@ exports.createPages = async ({ graphql, actions }) => {
           title
         }
       }
+      blogfiltered: allStrapiBlogs {
+        nodes {
+          category
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -58,6 +63,15 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve(`src/template/training-template.js`),
         context: {
           title: training.title,
+        },
+      })
+    })
+    result.data.blogfiltered.nodes.forEach(blog => {
+      createPage({
+        path: `/blog/${blog.category}`,
+        component: path.resolve(`src/template/blog-category-template.js`),
+        context: {
+          category: blog.category,
         },
       })
     })

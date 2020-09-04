@@ -19,7 +19,12 @@ const Blog = ({ id, title, image, date, category, slug, desc }) => {
         <p className="">{desc}</p>
         <div className="d-flex justify-content-between">
           <span className="d-block" style={{ backgroundColor: "lightgrey" }}>
-            {category}
+            <Link
+              to={`/blog/${category}`}
+              className="text-decoration-none text-dark"
+            >
+              {category}
+            </Link>
           </span>
           <span>{date}</span>
         </div>
