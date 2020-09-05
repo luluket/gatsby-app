@@ -8,26 +8,40 @@ export default function login() {
       <div className="d-flex mt-5">
         <img src={logo} className="mw-100 h-auto" alt=""></img>
       </div>
-      <div className="bg-light d-flex flex-column p-5 mt-5">
-        <h3>login</h3>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username" />
+      <form action="/" method="get">
+        <div className="bg-light d-flex flex-column p-5 mt-5">
+          <h3>login</h3>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <a href="/#" style={{ fontSize: "13px" }} className="">
+            Forgot your password?
+          </a>
+
+          <button
+            type="submit"
+            value="Log in"
+            className="btn btn-secondary mt-2  "
+          >
+            Log in
+          </button>
         </div>
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" />
-        </div>
-        <a href="/#" style={{ fontSize: "13px" }} className="">
-          Forgot your password?
-        </a>
-        <button
-          type="button"
-          className="btn btn-secondary d-inline-block mt-auto"
-        >
-          Log in
-        </button>
-      </div>
+      </form>
       <Link to="/" className="btn btn-info mt-3">
-        Back to home
+        Povratak
       </Link>
     </div>
   )

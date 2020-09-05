@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
     <Title title="Fitness Facility"></Title>
     <hr className="m-0"></hr>
     <Perks />
-    <div class="container">
+    <div className="container">
       <Slider data={data.allFile.nodes} />
       <Subtitle subtitle="Naše preporuke" />
       <Products items={data.products.nodes} />

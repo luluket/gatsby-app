@@ -78,13 +78,13 @@ export default class Products extends Component {
                     className="text-decoration-none text-dark"
                     key={product.id}
                   >
-                    <div class="card-header p-0">
+                    <div className="card-header p-0">
                       <Img fluid={product.image.childImageSharp.fluid}></Img>
                     </div>
-                    <div class="card-body border">
+                    <div className="card-body border">
                       <h5>{product.title}</h5>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                       <span>{product.price} kn</span>
                     </div>
                   </Link>
@@ -96,7 +96,7 @@ export default class Products extends Component {
       )
     } else {
       return (
-        <div class="container mt-5">
+        <div className="container mt-5">
           <div className="row mb-5">
             {this.state.shopItems.map(product => {
               return (
@@ -109,13 +109,13 @@ export default class Products extends Component {
                     className="text-decoration-none text-dark"
                     key={product.id}
                   >
-                    <div class="card-header p-0">
+                    <div className="card-header p-0">
                       <Img fluid={product.image.childImageSharp.fluid}></Img>
                     </div>
-                    <div class="card-body border">
+                    <div className="card-body border">
                       <h5>{product.title}</h5>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                       <span>{product.price} kn</span>
                     </div>
                   </Link>
