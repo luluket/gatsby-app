@@ -10,12 +10,12 @@ export default function login() {
       </div>
       <form action="/" method="get">
         <div className="bg-light d-flex flex-column p-5 mt-5">
-          <h3>login</h3>
+          <h3>Prijava</h3>
           <div class="input-group mb-3">
             <input
               type="text"
               className="form-control"
-              placeholder="Username"
+              placeholder="Korisničko ime"
               required
             />
           </div>
@@ -23,12 +23,12 @@ export default function login() {
             <input
               type="password"
               className="form-control"
-              placeholder="Password"
+              placeholder="Lozinka"
               required
             />
           </div>
-          <a href="/#" style={{ fontSize: "13px" }} className="">
-            Forgot your password?
+          <a href="/login/#" style={{ fontSize: "13px" }} className="">
+            Zaboravili ste lozinku?
           </a>
 
           <button
@@ -36,7 +36,7 @@ export default function login() {
             value="Log in"
             className="btn btn-secondary mt-2  "
           >
-            Log in
+            Prijavi se
           </button>
         </div>
       </form>

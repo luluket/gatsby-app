@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Fitness Facility" />
     <Title title="Fitness Facility"></Title>
     <hr className="m-0"></hr>
-    <Perks />
+    <Perks data={data.allStrapiProducts.totalCount} />
     <div className="container">
       <Slider data={data.allFile.nodes} />
       <Subtitle subtitle="Naše preporuke" />
@@ -102,6 +102,9 @@ export const query = graphql`
         content
         category
       }
+    }
+    allStrapiProducts {
+      totalCount
     }
   }
 `

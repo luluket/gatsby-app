@@ -7,7 +7,7 @@ const ComponentName = ({ data }) => {
       <div className="container">
         <Subtitle subtitle={data.training.title}></Subtitle>
 
-        <ul class="list-group m-5">
+        <ul className="list-group m-5">
           {data.training.day.map(day => {
             return (
               <li className="list-group-item p-0">

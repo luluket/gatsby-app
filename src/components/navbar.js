@@ -11,12 +11,12 @@ export default class Navbar extends Component {
       {
         id: 1,
         path: "/",
-        text: "home",
+        text: "naslovna",
       },
       {
         id: 2,
         path: "/training",
-        text: "training",
+        text: "trening",
       },
 
       {
@@ -32,7 +32,7 @@ export default class Navbar extends Component {
       {
         id: 5,
         path: "/contact",
-        text: "contact",
+        text: "kontakt",
       },
     ],
   }
@@ -50,7 +50,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-md navbar-light  w-100"
+        className="navbar navbar-expand-md navbar-light overflow-hidden w-100"
         style={{ backgroundColor: "hsl(212, 33%, 89%)" }}
       >
         <Link to="/" className="navbar-brand p-0 d-flex align-content-center">
@@ -85,11 +85,11 @@ export default class Navbar extends Component {
           <FaCartArrowDown className="cart-icon" />
 
           <Link to="/login" className="btn">
-            Login
+            Prijava
           </Link>
 
           <Link to="/signup" className="btn btn-secondary">
-            Sign up
+            Registracija
           </Link>
         </div>
       </nav>

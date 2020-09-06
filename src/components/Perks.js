@@ -3,7 +3,7 @@ import truck from "../images/perks/fast-delivery.svg"
 import whey from "../images/perks/whey.svg"
 import gym from "../images/perks/gym.svg"
 import blog from "../images/perks/blogging.svg"
-export default function Perks() {
+export default function Perks({ data }) {
   return (
     <div className="perks bg-light mx-auto d-flex justify-content-center">
       <div className="d-flex p-2 ml-2 mr-2">
@@ -27,7 +27,7 @@ export default function Perks() {
             alt=""
           />
         </div>
-        <div className="align-self-center">10 proizvoda</div>
+        <div className="align-self-center">{data} proizvoda</div>
       </div>
 
       <div className="d-flex p-2 ml-2 mr-2">

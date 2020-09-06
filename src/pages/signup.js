@@ -10,13 +10,13 @@ export default function signup() {
       </div>
       <form action="/" method="get">
         <div className="bg-light d-flex flex-column p-5 mt-5">
-          <h3>sign up</h3>
+          <h3>Registracija</h3>
           <div className="input-group mb-3">
             <input
               type="text"
               className="form-control"
               required
-              placeholder="Full name"
+              placeholder="Ime i prezime"
             />
           </div>
           <div className="input-group mb-3">
@@ -24,7 +24,7 @@ export default function signup() {
               type="text"
               className="form-control"
               required
-              placeholder="Username"
+              placeholder="Korisničko ime"
             />
           </div>
           <div className="input-group mb-3">
@@ -40,20 +40,20 @@ export default function signup() {
               type="password"
               className="form-control"
               required
-              placeholder="Password"
+              placeholder="Lozinka"
             />
           </div>
           <div className="input-group mb-3">
             <input
               type="password"
               className="form-control"
-              placeholder="Repeat password"
+              placeholder="Ponovi lozinku"
               required
             />
           </div>
 
           <button type="submit" className="btn btn-secondary mt-auto">
-            Sign up
+            Registriraj se
           </button>
         </div>
       </form>

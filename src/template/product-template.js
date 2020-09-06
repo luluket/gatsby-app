@@ -35,7 +35,7 @@ const ComponentName = ({ data }) => {
 
             <button className="btn btn-primary d-flex">
               <FaCartArrowDown className="align-self-center mr-2" />
-              Add to cart
+              Dodaj u košaru
             </button>
           </div>
         </div>
